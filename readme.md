@@ -94,11 +94,11 @@ Chain_Group = select, {all filter=Chain}
 - **EXIT**: 必须定义的出口节点。
 - **Chain Logic**: 程序会自动扫描所有抓取到的 JP/KR/TW 节点，并为它们创建一个“链式版本”。
   - 链式版本名称: `[原名] Chain`
-  - 逻辑: `EXIT` 节点 -> `原节点` (作为跳板) -> 目标网站
+  - 逻辑: `原节点` (作为跳板) -> `EXIT` -> 目标网站
 
 ```ini
 [Proxy]
-# 格式参考 Surge/Clash 标准
+# 格式参考 Surge 标准
 # 必须定义 EXIT 节点以启用链式代理功能
 EXIT = socks5, 1.2.3.4, 443, username=user, password=pass
 ```
