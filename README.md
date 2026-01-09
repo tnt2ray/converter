@@ -93,7 +93,7 @@ Chain_Group = select, {all filter=Chain}
 - **Chain Logic**: 程序会自动扫描所有抓取到的 JP/KR/TW 节点，并为它们创建一个“链式版本”。
   - 链式版本名称: `[原名] Chain`
   - 逻辑: `原节点` (作为跳板) -> `EXIT` -> 目标网站
-
+  - 没有配置EXIT则会跳过链式代理创建
 ```ini
 [Proxy]
 # 格式参考 Surge 标准
@@ -131,3 +131,4 @@ filename = clash.yaml
 5 */12 * * * curl -s "http://127.0.0.1:8000/sync?target=clash" > /dev/null
 
 ```
+
