@@ -1,5 +1,3 @@
-# Subconverter & Config Sync
-
 一个强大的跨平台订阅转换与配置同步工具，专为 Surge 和 Clash 设计。采用 Python (FastAPI) 构建，支持自动抓取、节点清洗、链式代理生成以及 GitHub Gist 自动备份。
 
 ## ✨ 核心特性
@@ -131,4 +129,5 @@ filename = clash.yaml
 
 # 每 12 小时更新一次 Clash 配置
 5 */12 * * * curl -s "http://127.0.0.1:8000/sync?target=clash" > /dev/null
+
 ```
